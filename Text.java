@@ -15,4 +15,15 @@ public class Text {
         }
         return text.toString();
     }
+    public static void main(String[] args) throws IOException {
+        List<String> text = new ArrayList<>();
+        BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
+        for (int i = 0; i < 5; i++){
+            String word = reader.readLine();
+            text.add(word);
+        }
+        String fragment = reader.readLine();
+        deleteFragment(fragment, text);
+        System.out.println(text);
+    }
 }
